@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const http = require('http')
 const cp = require('child_process')
 
@@ -24,7 +26,7 @@ async function compile(source) {
 }
 
 const server = http.createServer(async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080')
+  res.setHeader('Access-Control-Allow-Origin', 'http://desgroup.me')
   res.setHeader('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS')
 
   if (req.url === '/compile') {
